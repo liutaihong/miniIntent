@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello World</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #e8edf5 100%);
+      color: #1f2937;
+    }
+
+    .card {
+      padding: 48px 64px;
+      border-radius: 16px;
+      background: #ffffff;
+      box-shadow: 0 10px 30px rgba(31, 41, 55, 0.08);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 48px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      background: linear-gradient(90deg, #2563eb, #7c3aed);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    p {
+      margin-top: 16px;
+      font-size: 16px;
+      color: #6b7280;
+    }
+
+    button {
+      margin-top: 28px;
+      padding: 10px 24px;
+      font-size: 14px;
+      color: #ffffff;
+      background: #2563eb;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s ease, transform 0.1s ease;
+    }
+
+    button:hover { background: #1d4ed8; }
+    button:active { transform: scale(0.97); }
+
+    #msg {
+      margin-top: 16px;
+      font-size: 14px;
+      color: #2563eb;
+      min-height: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Hello World</h1>
+    <p>第一个 HTML 页面</p>
+    <button id="btn">点我一下</button>
+    <div id="msg"></div>
+  </div>
+
+  <script>
+    const msg = document.getElementById('msg');
+    document.getElementById('btn').addEventListener('click', () => {
+      msg.textContent = '你好，世界！👋';
+    });
+  </script>
+</body>
+</html>
